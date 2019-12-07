@@ -1,1 +1,2 @@
 app/instance/config.py
+*.pyc

@@ -15,16 +15,16 @@ class Employee(UserMixin, db.Model):
     and admin info contains here.
     """
 
-    __tablename__ = 'employee'
+    __tablename__ = 'employees'
 
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(60), index=True, unique=True)
     first_name = db.Column(db.String(60), index=True)
     last_name = db.Column(db.String(60), index=True)
     password_hash = db.Column(db.String(128))
-    department_id = db.Column(db.Integer, db.ForeignKey('departments.id'))
-    department_name= db.Column(db.Integer, db.ForeignKey('departments.name'))
-    salary = db.Column(db.FLOAT, index=True)
+    # department_id = db.Column(db.Integer, db.ForeignKey('departments.id'))
+    department_name= db.Column(db.String(60), db.ForeignKey('departments.name'))
+    salary = db.Column(db.DECIMAL, index=True)
     is_admin = db.Column(db.Boolean, default=False)
 
     @property
