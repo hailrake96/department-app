@@ -20,8 +20,8 @@ login_manager = LoginManager()
 def create_app(config_name):
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_object(app_config[config_name])
-    # app.config.from_pyfile('/home/anatolii/department-app/app/instance/config.py')
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:Ak12345678@localhost/dep_db'
+    app.config.from_pyfile('/home/anatolii/department-app/app/instance/config.py')
+    # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:Ak12345678@localhost/dep_db'
 
     Bootstrap(app)
     db.init_app(app)

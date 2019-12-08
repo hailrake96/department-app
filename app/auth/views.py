@@ -20,6 +20,7 @@ def register():
 
     if form.validate_on_submit():
         employee = Employee(username=form.username.data,
+                            email=form.email.data,
                             first_name=form.first_name.data,
                             last_name=form.last_name.data,
                             password=form.password.data)
@@ -42,19 +43,19 @@ def login():
     Handle requests to the /login route
     Log an employee in through the login form
     """
-    form = LoginForm
+    form = LoginForm()
 
     if form.validate_on_submit():
 
         # check whether employee exists in database and whether
-        # the password entered mathes the password in the database
-        employee = Employee.quert.filter_by(email=form.email.data).fisrt()
+        # the password entered matches the password in the database
+        employee = Employee.query.filter_by(email=form.email.data).first()gi
         if employee is not None and employee.verify_password(
                 form.password.data):
             # log employee in
             login_user(employee)
 
-            # redirec to the dashboard page after login
+            # redirect to the dashboard page after login
             return redirect(url_for('home.dashboard'))
 
     # when login details are incorrect
