@@ -4,9 +4,9 @@ from flask_login import current_user, login_required
 
 # Local imports
 from app.admin import admin
-from app.admin.forms import DepartmentForm
+from app.admin.forms import DepartmentForm, EmployeeAssignForm
 from app import db
-from app.models import Department
+from app.models import Department, Employee
 
 
 def check_admin():
@@ -57,7 +57,7 @@ def add_department():
             db.session.add(department)
             db.session.commit()
             flash('The new department have been successfully added !')
-        except :
+        except:
             flash('Error: department name already exists.')
 
         return redirect(url_for('admin.list_departments'))
@@ -118,3 +118,47 @@ def delete_department(department_id):
     return redirect(url_for('admin.list_departments'))
 
     return render_template(title="Delete Department")
+
+
+@admin.route('/employees')
+@login_required
+def list_employees():
+    """
+    List all employees
+    """
+
+    check_admin()
+
+    employees = Employee.query.all()
+
+    return render_template('admin/employees/employees.html',
+                    employees=employees, title='Employees')
+
+@admin.route('/employees/assign/<int:id>',methods=['GET','POST'])
+@login_required
+def assign_employee(id):
+    """
+     Assign a department to an employee
+    """
+    check_admin()
+
+    employee = Employee.query.get_or_404(id)
+
+    # prevent admin from being assigned a department or role
+    if employee.is_admin:
+        abort(403)
+
+    form = EmployeeAssignForm(obj=employee)
+
+    if form.validate_on_submit():
+        employee.department_name = form.department_name.data
+        db.session.add(employee)
+        db.session.commit()
+        flash('The department has been succesfully assigned !')
+
+        # redirect to the roles page
+        return redirect(url_for('admin.list_employees'))
+
+    return render_template('admin/employees/employee.html',
+                           employee=employee,form=form,
+                           title='Assign Employee')

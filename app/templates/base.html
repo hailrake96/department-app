@@ -4,7 +4,7 @@
     <title>{{ title }} | Departments</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/epam.png') }}">
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
@@ -25,7 +25,7 @@
                     {% if current_user.is_admin %}
                         <li><a href="{{ url_for('home.admin_dashboard') }}">Dashboard</a></li>
                         <li><a href="{{ url_for('admin.list_departments') }}">Departments</a></li>
-                        <li><a href="#">Employees</a></li>
+                        <li><a href="{{ url_for('admin.list_employees') }}">Employees</a></li>
                     {% else %}
                         <li><a href="{{ url_for('home.dashboard') }}">Dashboard</a></li>
                     {% endif %}

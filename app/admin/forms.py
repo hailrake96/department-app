@@ -2,6 +2,10 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
+from wtforms.ext.sqlalchemy.fields import QuerySelectField
+
+# Local imports
+from app.models import Department
 
 
 class DepartmentForm(FlaskForm):
@@ -11,3 +15,13 @@ class DepartmentForm(FlaskForm):
     name = StringField('Name', validators=[DataRequired()])
     # desciption = StringField('Description',validators=[DataRequired]) # ToDO make that on Future
     submit = SubmitField('Submit')
+
+class EmployeeAssignForm(FlaskForm):
+    """
+    Form for admin to assign departments to employees
+    """
+    department_name = QuerySelectField(query_factory=lambda: Department.query.all(),
+                                       get_label='name')
+
+    submit = SubmitField('Submit')
+
