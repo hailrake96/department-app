@@ -24,7 +24,8 @@ class Employee(UserMixin, db.Model):
     last_name = db.Column(db.String(60), index=True)
     password_hash = db.Column(db.String(128))
     # department_id = db.Column(db.Integer, db.ForeignKey('departments.id'))
-    department_name= db.Column(db.String(60), db.ForeignKey('departments.name'))
+    department_name = db.Column(db.String(60), db.ForeignKey('departments.name'))
+    date_of_birth = db.Column(db.DATE)
     salary = db.Column(db.DECIMAL, index=True)
     is_admin = db.Column(db.Boolean, default=False)
 
@@ -65,11 +66,11 @@ class Department(db.Model):
 
     __tablename__ = 'departments'
 
-    id = db.Column(db.Integer, primary_key=True)
+    department_id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(60), unique=True)
 
     def __repr__(self):
-        return f'<Department: {self.name}>'
+        return f'Department: {self.name}'
 
-
-
+    def __str__(self):
+        return f'{self.name}'

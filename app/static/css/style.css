@@ -44,8 +44,8 @@ p.copyright {
 
 .center {
     margin: auto;
-    width: 50%;
-    padding: 10px;
+    width: 70%;
+    padding: 5px;
 }
 
 .content-section {
@@ -104,4 +104,20 @@ p.copyright {
   height: auto !important;
   height: 100%;
   margin: 0 auto -4em;
+}
+.outer {
+    display: table;
+    position: absolute;
+    height: 70%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto;
 }
