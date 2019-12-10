@@ -20,8 +20,9 @@
                                     <th width="20%"> Last Name</th>
                                     <th width="25%"> Department</th>
                                     <th width="15%"> Date of birth</th>
-                                    <th width="10%"> Salary</th>
-                                    <th width="10%"> Assign</th>
+                                    <th width="10%"> Salary $</th>
+                                    <th width="10%"> Edit</th>
+                                    <th width="10%"> Delete</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -34,14 +35,15 @@
                                             <td> N/A</td>
                                             <td> N/A</td>
                                             <td> N/A</td>
+                                            <td> N/A</td>
                                         </tr>
                                     {% else %}
                                         <tr>
                                             <td> {{ employee.first_name }} </td>
                                             <td>{{ employee.last_name }}</td>
                                             <td>
-                                                {% if employee.department %}
-                                                    {{ employee.department.name }}
+                                                {% if employee.department_name %}
+                                                    {{ employee.department_name }}
                                                 {% else %}
                                                     -
                                                 {% endif %}
@@ -50,7 +52,12 @@
                                             <td>{{ employee.salary }}</td>
                                             <td>
                                                 <a href="{{ url_for('admin.assign_employee', id=employee.id) }}">
-                                                    <i class="fa fa-user-plus"></i> Assign
+                                                    <i class="fa fa-user-plus"></i> Edit
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="{{ url_for('admin.delete_employee', id=employee.id) }}">
+                                                    <i class="fa fa-trash"></i> Delete
                                                 </a>
                                             </td>
                                         </tr>

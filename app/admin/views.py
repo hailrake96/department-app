@@ -4,9 +4,9 @@ from flask_login import current_user, login_required
 
 # Local imports
 from app.admin import admin
-from app.admin.forms import DepartmentForm,EmployeeAssignForm
+from app.admin.forms import DepartmentForm, EmployeeAssignForm
 from app import db
-from app.models import Department,Employee
+from app.models import Department, Employee
 
 
 def check_admin():
@@ -57,7 +57,7 @@ def add_department():
             db.session.add(department)
             db.session.commit()
             flash('The new department have been successfully added !')
-        except :
+        except:
             flash('Error: department name already exists.')
 
         return redirect(url_for('admin.list_departments'))
@@ -83,6 +83,7 @@ def edit_department(department_id):
 
     department = Department.query.get_or_404(department_id)
     form = DepartmentForm(obj=department)
+
     if form.validate_on_submit():
         department.name = form.name.data
         # department.description = form.description.data  # ToDo description later
@@ -133,7 +134,8 @@ def list_employees():
     return render_template('admin/employees/employees.html',
                            employees=employees, title='Employees')
 
-@admin.route('/employees/assign/<int:id>',methods=['GET','POST'])
+
+@admin.route('/employees/assign/<int:id>', methods=['GET', 'POST'])
 @login_required
 def assign_employee(id):
     """
@@ -151,13 +153,38 @@ def assign_employee(id):
 
     if form.validate_on_submit():
         employee.department_name = form.department_name.data
+        employee.first_name = form.first_name.data
+        employee.last_name = form.last_name.data
+        employee.date_of_birth = form.date_of_birth.data
+        employee.salary = form.salary.data
+
         db.session.add(employee)
         db.session.commit()
-        flash('The department has been succesfully assigned !')
+        flash('The employee has been succesfully assigned !')
 
         # redirect to the roles page
         return redirect(url_for('admin.list_employees'))
 
     return render_template('admin/employees/employee.html',
-                           employee=employee,form=form,
+                           employee=employee, form=form,
                            title='Assign Employee')
+
+@admin.route('/employees/delete/<int:id>', methods=['GET', 'POST'])
+@login_required
+def delete_employee(id):
+    """
+    Delete a department from the database
+
+    """
+    #  Throws a 403 Forbidden error if a non-admin user attempts to access these views.
+    check_admin()
+
+    employee = Employee.query.get_or_404(id)
+    db.session.delete(employee)
+    db.session.commit()
+    flash(f'{employee.first_name} {employee.last_name} has been fired or gone!')
+
+    # redirect to the departments page
+    return redirect(url_for('admin.list_employees'))
+
+    return render_template(title="Delete Employee")

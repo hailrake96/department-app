@@ -70,4 +70,7 @@ class Department(db.Model):
     name = db.Column(db.String(60), unique=True)
 
     def __repr__(self):
-        return f'<Department: {self.name}>'
+        return f'Department: {self.name}'
+
+    def __str__(self):
+        return f'{self.name}'

@@ -24,7 +24,6 @@ class RegistrationForm(FlaskForm):
     first_name = StringField('First Name', validators=[DataRequired()])
     last_name = StringField('Last Name', validators=[DataRequired()])
     date_of_birth = DateField('Date of birth', validators=[DataRequired()], format='%Y-%m-%d')
-    salary = DecimalField('Expected salary $ :)', validators=[DataRequired()])
     password = PasswordField('Password', validators=[
         DataRequired(),
         EqualTo('confirm_password')

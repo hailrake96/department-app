@@ -24,7 +24,6 @@ def register():
                             first_name=form.first_name.data,
                             last_name=form.last_name.data,
                             date_of_birth=form.date_of_birth.data,
-                            salary=form.salary.data,
                             password=form.password.data
                             )
 
