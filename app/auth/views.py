@@ -23,7 +23,10 @@ def register():
                             email=form.email.data,
                             first_name=form.first_name.data,
                             last_name=form.last_name.data,
-                            password=form.password.data)
+                            date_of_birth=form.date_of_birth.data,
+                            salary=form.salary.data,
+                            password=form.password.data
+                            )
 
         # add employee to the database
         db.session.add(employee)

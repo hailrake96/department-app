@@ -1,7 +1,10 @@
 # 3rd party imports
 from flask_wtf import FlaskForm
-from wtforms import PasswordField, StringField, SubmitField, ValidationError
+from wtforms import PasswordField, StringField, SubmitField, ValidationError, DecimalField
 from wtforms.validators import DataRequired, Email, EqualTo
+from wtforms.fields.html5 import DateField
+
+
 
 # Local import
 from app.models import Employee
@@ -12,7 +15,7 @@ class RegistrationForm(FlaskForm):
     Form for users to create new account
 
     For the registration form, we require users to fill in their
-    email address, username, first name, last name, and their password twice
+    email address, username, first name, last name,date of birth and expected salary and their password twice
 
 
     """
@@ -20,6 +23,8 @@ class RegistrationForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
     first_name = StringField('First Name', validators=[DataRequired()])
     last_name = StringField('Last Name', validators=[DataRequired()])
+    date_of_birth = DateField('Date of birth', validators=[DataRequired()], format='%Y-%m-%d')
+    salary = DecimalField('Expected salary $ :)', validators=[DataRequired()])
     password = PasswordField('Password', validators=[
         DataRequired(),
         EqualTo('confirm_password')
