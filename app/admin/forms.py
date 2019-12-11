@@ -35,7 +35,7 @@ def get_pk(obj):
     return str(obj)
 
 
-class EmployeeAssignForm(FlaskForm):
+class EmployeeEditForm(FlaskForm):
     """
     Form for admin to assign departments and roles to employees
     """

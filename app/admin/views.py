@@ -4,7 +4,7 @@ from flask_login import current_user, login_required
 
 # Local imports
 from app.admin import admin
-from app.admin.forms import DepartmentForm, EmployeeAssignForm
+from app.admin.forms import DepartmentForm, EmployeeEditForm
 from app import db
 from app.models import Department, Employee
 
@@ -129,15 +129,50 @@ def list_employees():
     """
     check_admin()
 
-    employees = Employee.query.all()
+    employees = Employee.query.order_by(Employee.first_name, Employee.last_name).all()
 
     return render_template('admin/employees/employees.html',
                            employees=employees, title='Employees')
 
 
-@admin.route('/employees/assign/<int:id>', methods=['GET', 'POST'])
+@admin.route('/employees/add', methods=['GET', 'POST'])
 @login_required
-def assign_employee(id):
+def add_employee():
+    """
+    Add an employee to the database
+    """
+    #  Throws a 403 Forbidden error if a non-admin user attempts to access these views.
+    check_admin()
+
+    add_employee = True
+
+    form = EmployeeEditForm()
+
+    if form.validate_on_submit():
+        employee = Employee(department_name=form.department_name.data,
+                            first_name=form.first_name.data,
+                            last_name=form.last_name.data,
+                            date_of_birth=form.date_of_birth.data,
+                            salary=form.salary.data
+                            )
+
+        db.session.add(employee)
+        db.session.commit()
+
+        flash(f'{employee.first_name} {employee.last_name}  have been successfully added !')
+
+        return redirect(url_for('admin.list_employees'))
+
+    return render_template('admin/employees/employee.html', action='Add',
+                           add_employee=add_employee,
+                           form=form,
+                           title='Add Employee'
+                           )
+
+
+@admin.route('/employees/edit/<int:id>', methods=['GET', 'POST'])
+@login_required
+def edit_employee(id):
     """
      Assign a department to an employee
     """
@@ -149,7 +184,7 @@ def assign_employee(id):
     if employee.is_admin:
         abort(403)
 
-    form = EmployeeAssignForm(obj=employee)
+    form = EmployeeEditForm(obj=employee)
 
     if form.validate_on_submit():
         employee.department_name = form.department_name.data
@@ -160,14 +195,15 @@ def assign_employee(id):
 
         db.session.add(employee)
         db.session.commit()
-        flash('The employee has been succesfully assigned !')
+        flash('The employee has been succesfully edit !')
 
         # redirect to the roles page
         return redirect(url_for('admin.list_employees'))
 
     return render_template('admin/employees/employee.html',
                            employee=employee, form=form,
-                           title='Assign Employee')
+                           title='Edit Employee')
+
 
 @admin.route('/employees/delete/<int:id>', methods=['GET', 'POST'])
 @login_required
@@ -187,4 +223,3 @@ def delete_employee(id):
     # redirect to the departments page
     return redirect(url_for('admin.list_employees'))
 
-    return render_template(title="Delete Employee")
