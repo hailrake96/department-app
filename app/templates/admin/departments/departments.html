@@ -19,13 +19,13 @@
                     {% if departments %}
                         <hr class="intro-divider">
                         <div class="center">
-                            <table class="table table-striped table-bordered">
+                            <table class="table table-striped table-bordered" id="tables">
                                 <thead>
                                 <tr>
-                                    <th width="25%"> Name</th>
-                                    <th width="25%"> Average salary</th>
-                                    <th width="25%"> Edit</th>
-                                    <th width="25%"> Delete</th>
+                                    <th width="25%" onclick="sortTable(0)"> Name</th>
+                                    <th width="25%" onclick="sortTable(1)"> Average salary</th>
+                                    <th width="25%" onclick="sortTable(2)"> Edit</th>
+                                    <th width="25%" onclick="sortTable(3)"> Delete</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -53,6 +53,8 @@
                                 {% endfor %}
                                 </tbody>
                             </table>
+                            <script type="text/javascript"
+                                    src="{{ url_for('static', filename='js/sorttables.js') }}"></script>
                         </div>
                         <div style="text-align: center">
                     {% else %}

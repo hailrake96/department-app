@@ -20,7 +20,7 @@ def check_admin():
         abort(403)
 
 
-@admin.route('departments', methods=['Get', 'POST'])
+@admin.route('departments', methods=['Get'])
 @login_required
 def list_departments():
     """
@@ -129,7 +129,8 @@ def list_employees():
     """
     check_admin()
 
-    employees = Employee.query.order_by(Employee.first_name, Employee.last_name).all()
+    # employees = Employee.query.order_by(Employee.first_name, Employee.last_name).all()
+    employees = Employee.query.all()
 
     return render_template('admin/employees/employees.html',
                            employees=employees, title='Employees')
@@ -205,7 +206,7 @@ def edit_employee(id):
                            title='Edit Employee')
 
 
-@admin.route('/employees/delete/<int:id>', methods=['GET', 'POST'])
+@admin.route('/employees/delete/<int:id>', methods=['DELETE'])
 @login_required
 def delete_employee(id):
     """
