@@ -1,6 +1,8 @@
 # 3rd party imports
 from flask import abort, flash, redirect, render_template, url_for
 from flask_login import current_user, login_required
+from sqlalchemy import exc
+
 
 # Local imports
 from app.admin import admin
@@ -110,10 +112,14 @@ def delete_department(department_id):
     #  Throws a 403 Forbidden error if a non-admin user attempts to access these views.
     check_admin()
 
-    department = Department.query.get_or_404(department_id)
-    db.session.delete(department)
-    db.session.commit()
-    flash('The department have been successfully deleted !')
+    try:
+        department = Department.query.get_or_404(department_id)
+        db.session.delete(department)
+        db.session.commit()
+        flash('The department have been successfully deleted !')
+    except exc.IntegrityError as e:
+        flash('Departments cannot be deleted with employees! We are not Ciklum !!!')
+        return redirect(url_for('admin.list_departments'))
 
     # redirect to the departments page
     return redirect(url_for('admin.list_departments'))
@@ -206,7 +212,7 @@ def edit_employee(id):
                            title='Edit Employee')
 
 
-@admin.route('/employees/delete/<int:id>', methods=['DELETE'])
+@admin.route('/employees/delete/<int:id>', methods=['Delete'])
 @login_required
 def delete_employee(id):
     """
