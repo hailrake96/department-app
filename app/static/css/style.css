@@ -124,17 +124,17 @@ p.copyright {
     margin-right: auto;
 }
 
-th {
+.thpointer {
     cursor: pointer;
 }
 
-input[type=text] {
+.myinput{
     width: 130px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 
 }
 
-input[type=text]:focus {
+.myinput:focus {
     width: 50%;
 }

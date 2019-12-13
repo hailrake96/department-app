@@ -5,6 +5,7 @@ from wtforms.validators import DataRequired,Optional
 from wtforms.ext.sqlalchemy.fields import QuerySelectField
 from wtforms.fields.html5 import DateField
 
+
 # Local imports
 from app.models import Department, Employee
 

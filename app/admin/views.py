@@ -2,7 +2,8 @@
 from flask import abort, flash, redirect, render_template, url_for
 from flask_login import current_user, login_required
 from sqlalchemy import exc
-
+from sqlalchemy import func
+from sqlalchemy.sql import label
 
 # Local imports
 from app.admin import admin
@@ -31,11 +32,20 @@ def list_departments():
     return a rendered template of departments
     """
     check_admin()
+    avg_info = dict()
+
+    avg_data = Employee.query.with_entities(Employee.department_name,
+                                            func.avg(Employee.salary).label('salary')).group_by(
+        Employee.department_name)
+
+    for unit in avg_data:
+        if unit.department_name:
+            avg_info[unit.department_name] = unit.salary
 
     departments = Department.query.all()
 
     return render_template('admin/departments/departments.html',
-                           departments=departments, title='Departments')
+                           departments=departments, title='Departments', avg_info=avg_info, zip=zip)
 
 
 @admin.route('/departments/add', methods=['GET', 'POST'])
@@ -212,7 +222,7 @@ def edit_employee(id):
                            title='Edit Employee')
 
 
-@admin.route('/employees/delete/<int:id>', methods=['Delete'])
+@admin.route('/employees/delete/<int:id>', methods=['POST', 'GET'])
 @login_required
 def delete_employee(id):
     """
@@ -229,4 +239,3 @@ def delete_employee(id):
 
     # redirect to the departments page
     return redirect(url_for('admin.list_employees'))
-
