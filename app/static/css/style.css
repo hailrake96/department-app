@@ -8,12 +8,12 @@ body, h1, h2, h3 {
     font-weight: 700;
 }
 
-a, .navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a {
-  color: #aec251;
+a, .navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a {
+    color: #6495ED;
 }
 
-a:hover, .navbar-default .navbar-brand:hover, .navbar-default .navbar-nav>li>a:hover {
-  color: #687430;
+a:hover, .navbar-default .navbar-brand:hover, .navbar-default .navbar-nav > li > a:hover {
+    color: #687430;
 }
 
 footer {
@@ -28,18 +28,19 @@ p.copyright {
 .alert-info {
     width: 50%;
     margin: auto;
-    color: #687430;
-    background-color: #e6ecca;
-    border-color: #aec251;
+    color: #6495ED;
+    background-color: white;
+    border-color: blue;
 }
 
 .btn-default {
-    border-color: #aec251;
-    color: #aec251;
+    border-color: #6495ED;
+    color: #6495ED;
+    margin-bottom: 1em;
 }
 
 .btn-default:hover {
-    background-color: #aec251;
+    background-color: #6495ED;
 }
 
 .center {
@@ -54,14 +55,14 @@ p.copyright {
 }
 
 .footer, .push {
-  clear: both;
-  height: 4em;
+    clear: both;
+    height: 4em;
 }
 
 .intro-divider {
     width: 400px;
     border-top: 1px solid #f8f8f8;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .intro-header {
@@ -82,12 +83,12 @@ p.copyright {
 
 .intro-message > h1 {
     margin: 0;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
     font-size: 5em;
 }
 
 .intro-message > h3 {
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
 .lead {
@@ -100,14 +101,15 @@ p.copyright {
 }
 
 .wrapper {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin: 0 auto -4em;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -4em;
 }
+
 .outer {
     display: table;
-    position: absolute;
+    position: relative;
     height: 70%;
     width: 100%;
 }
@@ -120,4 +122,19 @@ p.copyright {
 .inner {
     margin-left: auto;
     margin-right: auto;
+}
+
+.thpointer {
+    cursor: pointer;
+}
+
+.myinput{
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+
+}
+
+.myinput:focus {
+    width: 50%;
 }

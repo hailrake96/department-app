@@ -1,6 +1,12 @@
 {% import "bootstrap/wtf.html" as wtf %}
 {% extends "base.html" %}
-{% block title %}Edit Employee{% endblock %}
+{% block title %}
+     {% if edit_employee %}
+         Edit Employee
+    {% else %}
+        Add Employee
+    {% endif %}
+{% endblock %}
 {% block body %}
 <div class="content-section">
  <div class="outer">
@@ -11,8 +17,12 @@
             <br/>
             <p>
                 Select data to edit
-                <span style="color: #aec251;">
-                    {{ employee.first_name }} {{ employee.last_name }}
+                <span style="color: #6495ED;">
+                    {% if title == 'Edit Employee' %}
+                        {{ employee.first_name }} {{ employee.last_name }}
+                    {% else %}
+                    Unknown
+                    {% endif %}
                 </span>
             </p>
             <br/>
