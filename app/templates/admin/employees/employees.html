@@ -17,12 +17,8 @@
                         </a>
                     </div>
                     <div style="text-align: center">
-                        <label for="Date">Date From:</label>
-                        <input type="date" id="datefrom" class="light-table-filter form-control" style="width:50%"
-                               data-table="order-table" placeholder="Filter">
-                        <label for="Date">Date to:</label>
-                        <input type="date" id="dateto" class="light-table-filter form-control" style="width:50%"
-                               data-table="order-table" placeholder="Filter">
+                        <input class="myinput" type="text" id="myInput" onkeyup="myFunction()" name="search"
+                               placeholder="Search date..">
                     </div>
                     {% if employees %}
                         <hr class="intro-divider">
@@ -30,11 +26,11 @@
                             <table class="table table-striped table-bordered" id="tables">
                                 <thead>
                                 <tr>
-                                    <th class="thpointer" width="20%" onclick="sortTable(0)"> First Name</th>
-                                    <th class="thpointer" width="20%" onclick="sortTable(1)"> Last Name</th>
-                                    <th class="thpointer" width="25%" onclick="sortTable(2)"> Department</th>
-                                    <th class="thpointer" width="15%" onclick="sortTable(3)"> Date of birth</th>
-                                    <th class="thpointer" width="10%" onclick="sortTable(4)"> Salary $</th>
+                                    <th width="20%" onclick="sortTable(0)"> First Name</th>
+                                    <th width="20%" onclick="sortTable(1)"> Last Name</th>
+                                    <th width="25%" onclick="sortTable(2)"> Department</th>
+                                    <th width="15%" onclick="sortTable(3)"> Date of birth</th>
+                                    <th width="10%" onclick="sortTable(4)"> Salary $</th>
                                     <th width="10%"> Edit</th>
                                     <th width="10%"> Delete</th>
                                 </tr>
@@ -62,8 +58,12 @@
                                                     -
                                                 {% endif %}
                                             </td>
-                                            <td>{{ employee.date_of_birth.strftime('%d.%m.%Y') }}</td>
-                                            <td>{{ employee.salary }}</td>
+                                            <td>{{ employee.date_of_birth.strftime('%d-%m-%Y') }}</td>
+                                            <td>{% if employee.salary %}
+                                                {{ employee.salary }}
+                                            {% else %}
+                                                0
+                                            {% endif %}</td>
                                             <td>
                                                 <a href="{{ url_for('admin.edit_employee', id=employee.id) }}">
                                                     <i class="fa fa-user-plus"></i> Edit
