@@ -19,6 +19,7 @@ Flask-Migrate==2.5.2
 Flask-RESTful==0.3.7
 Flask-Script==2.0.5
 Flask-SQLAlchemy==2.1
+Flask-Testing==0.7.1
 Flask-WTF==0.13.1
 forms2==1.1.2
 idna==2.8
