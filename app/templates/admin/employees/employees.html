@@ -19,11 +19,13 @@
                     <div style="text-align: center">
                         <input class="myinput" type="text" id="myInput" onkeyup="myFunction()" name="search"
                                placeholder="Search date..">
+                        <input data-filter="from" class="date-input date-from" type="date" placeholder="Date from">
+                        <input data-filter="to" class="date-input date-to" type="date" placeholder="Date to">
                     </div>
                     {% if employees %}
                         <hr class="intro-divider">
                         <div class="center">
-                            <table class="table table-striped table-bordered" id="tables">
+                            <table class="table table-striped table-bordered filtered-table" id="tables">
                                 <thead>
                                 <tr>
                                     <th width="20%" class="thpointer" onclick="sortTable(0)"> First Name</th>
@@ -38,7 +40,7 @@
                                 <tbody>
                                 {% for employee in employees %}
                                     {% if employee.is_admin %}
-                                        <tr style="background-color: #6495ED; color: white;">
+                                        <tr class="admin-row" style="background-color: #6495ED; color: white;">
                                             <td><i class="fa fa-key"></i> Admin</td>
                                             <td> N/A</td>
                                             <td> N/A</td>
@@ -48,7 +50,7 @@
                                             <td> N/A</td>
                                         </tr>
                                     {% else %}
-                                        <tr>
+                                        <tr class="table-row">
                                             <td> {{ employee.first_name }} </td>
                                             <td>{{ employee.last_name }}</td>
                                             <td>
@@ -58,7 +60,7 @@
                                                     -
                                                 {% endif %}
                                             </td>
-                                            <td>{{ employee.date_of_birth.strftime('%Y/%m/%d') }}</td>
+                                            <td class="date">{{ employee.date_of_birth.strftime('%d.%m.%Y') }}</td>
                                             <td>{% if employee.salary %}
                                                 {{ employee.salary }}
                                             {% else %}
@@ -83,6 +85,7 @@
                                     src="{{ url_for('static', filename='js/sorttables.js') }}"></script>
                             <script type="text/javascript"
                                     src="{{ url_for('static', filename='js/search.js') }}"></script>
+                            <script src="{{ url_for('static', filename='js/datefilter.js') }}"></script>
                         </div>
                     {% endif %}
                 </div>
