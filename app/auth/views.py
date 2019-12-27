@@ -2,12 +2,16 @@
 from flask import flash, redirect, render_template, url_for
 from flask_login import login_required, login_user, logout_user
 
+
 # Local imports
 from . import auth
 # import app.auth as auth
 from app.auth.forms import LoginForm, RegistrationForm
 from app import db
 from app.models import Employee
+from loggers import get_logger
+
+logger = get_logger(__name__)
 
 
 @auth.route('/register', methods=['GET', 'POST'])
@@ -30,6 +34,8 @@ def register():
         # add employee to the database
         db.session.add(employee)
         db.session.commit()
+        logger.info(f'{employee.email} {employee.username} has registered')
+
         flash('You have successfully registered! You may log in now.')
 
         # redirect to the login page
@@ -56,6 +62,7 @@ def login():
                 form.password.data):
             # log employee in
             login_user(employee)
+            logger.info(f'{employee.email} {employee.username} admin:{employee.is_admin} logged in')
 
             # redirect to the appropriate dashboard page
             if employee.is_admin:
@@ -65,6 +72,7 @@ def login():
 
     # when login details are incorrect
         else:
+            logger.info(f'{employee.email} {employee.username} admin:{employee.is_admin} entered invalid data')
             flash('Invalid email or password')
 
     # load login template

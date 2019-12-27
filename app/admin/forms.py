@@ -6,9 +6,8 @@ from wtforms.ext.sqlalchemy.fields import QuerySelectField
 from wtforms.fields.html5 import DateField
 
 
-
 # Local imports
-from app.models import Department, Employee
+from app.models import Department
 
 
 class DepartmentForm(FlaskForm):

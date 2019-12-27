@@ -7,9 +7,8 @@ from flask_login import LoginManager
 from flask_migrate import Migrate, MigrateCommand
 from flask_bootstrap import Bootstrap
 from flask_script import Manager
-
-# local imports
-from config import app_config
+# import logging.config
+from loggers import get_logger
 
 # db variable initialization
 db = SQLAlchemy()
@@ -17,11 +16,16 @@ db = SQLAlchemy()
 # LoginManager variable initialization
 login_manager = LoginManager()
 
+# Logging configuration
+# logging.config.fileConfig('logging.conf')
+# logger = logging.getLogger(__name__)
+logger = get_logger(__name__)
+
 
 def create_app(config_name):
     app = Flask(__name__, instance_relative_config=True)
     # app.config.from_object(app_config[config_name])
-    app.config.from_pyfile('/home/anatolii/department-app/app/instance/config.py')
+    app.config.from_pyfile('config.py')
 
     Bootstrap(app)
     db.init_app(app)
@@ -50,14 +54,20 @@ def create_app(config_name):
 
     @app.errorhandler(403)
     def forbidden(error):
+        logger.error('403 Error occurred')
+
         return render_template('errors/403.html', title='Forbidden'), 403
 
     @app.errorhandler(404)
     def page_not_found(error):
+        logger.error('404 Error occurred')
+
         return render_template('errors/404.html', title='Page Not Found'), 404
 
     @app.errorhandler(500)
     def internal_server_error(error):
+        logger.error('500 Error occurred')
+
         return render_template('errors/500.html', title='Server Error'), 500
 
     @app.route('/500')
