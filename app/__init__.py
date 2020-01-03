@@ -1,5 +1,4 @@
 # app/__init__.py
-
 # third-party imports
 from flask import Flask, render_template, abort
 from flask_sqlalchemy import SQLAlchemy
@@ -7,24 +6,31 @@ from flask_login import LoginManager
 from flask_migrate import Migrate, MigrateCommand
 from flask_bootstrap import Bootstrap
 from flask_script import Manager
-# import logging.config
 from loggers import get_logger
+from config import app_config
 
 # db variable initialization
 db = SQLAlchemy()
 
-# LoginManager variable initialization
+# LoginManager variable initialization.
 login_manager = LoginManager()
-
-# Logging configuration
-# logging.config.fileConfig('logging.conf')
-# logger = logging.getLogger(__name__)
+# Logger object initialization.
 logger = get_logger(__name__)
 
 
 def create_app(config_name):
+    """Create Flask application
+
+    Create Flask application with configuration provided by config_name variable.
+    Furthermore, this function create database migrations and handle 403,404,500 errors.
+    Args:
+        config_name: configuration variable that configure executing mod.
+
+    Returns: Flask application.
+
+    """
     app = Flask(__name__, instance_relative_config=True)
-    # app.config.from_object(app_config[config_name])
+    app.config.from_object(app_config[config_name])
     app.config.from_pyfile('config.py')
 
     Bootstrap(app)
@@ -75,3 +81,4 @@ def create_app(config_name):
         abort(500)
 
     return app
+

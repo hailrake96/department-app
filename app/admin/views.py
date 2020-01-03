@@ -3,26 +3,22 @@ from flask import abort, flash, redirect, render_template, url_for
 from flask_login import current_user, login_required
 from sqlalchemy import exc
 from sqlalchemy import func
-
-
 # Local imports
 from app.admin import admin
 from app.admin.forms import DepartmentForm, EmployeeEditForm
 from app import db
-from app.models import Department,Employee
+from app.models import Department, Employee
 from loggers import get_logger
-
-
 
 
 logger = get_logger(__name__)
 
 
 def check_admin():
-    """
-    Prevent non-admins from accessing the page
+    """Prevent non-admins from accessing the page
 
-     Return: 403 error
+     Return:
+         403 error
 
     """
     if not current_user.is_admin:
@@ -152,6 +148,7 @@ def delete_department(department_id):
     # redirect to the departments page
     return redirect(url_for('admin.list_departments'))
 
+
 @admin.route('/employees')
 @login_required
 def list_employees():
@@ -191,7 +188,7 @@ def add_employee():
         db.session.add(employee)
         db.session.commit()
         logger.info(f'Add employee Id: {employee.id}, first name: {employee.first_name},'
-                     f'last name: {employee.last_name} has been added. ')
+                    f'last name: {employee.last_name} has been added. ')
 
         flash(f'{employee.first_name} {employee.last_name}  have been successfully added !')
 
@@ -230,7 +227,7 @@ def edit_employee(id):
         db.session.add(employee)
         db.session.commit()
         logger.info(f'Id: {employee.id}, first name: {employee.first_name},'
-                     f'last name: {employee.last_name} has been edit. ')
+                    f'last name: {employee.last_name} has been edit. ')
 
         flash('The employee has been succesfully edit !')
 
@@ -257,7 +254,7 @@ def delete_employee(id):
     db.session.delete(employee)
     db.session.commit()
     logger.info(f'Id: {employee.id}, first name: {employee.first_name},'
-                 f'last name: {employee.last_name} has been deleted. ')
+                f'last name: {employee.last_name} has been deleted. ')
 
     flash(f'{employee.first_name} {employee.last_name} has been fired or gone!')
 
