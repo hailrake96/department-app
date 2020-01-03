@@ -22,8 +22,8 @@
                             <table class="table table-striped table-bordered" id="tables">
                                 <thead>
                                 <tr>
-                                    <th class="thpointer" width="25%" onclick="sortTable(0)"> Name</th>
-                                    <th class="thpointer" width="25%" onclick="sortSalary(1)"> Average salary</th>
+                                    <th class="thpointer" width="25%" onclick="SortTable(0,'T')"> Name</th>
+                                    <th class="thpointer" width="25%" onclick="SortTable(1,'N')"> Average salary</th>
                                     <th width="25%"> Edit</th>
                                     <th width="25%"> Delete</th>
                                 </tr>
@@ -58,8 +58,8 @@
                                 {% endfor %}
                                 </tbody>
                             </table>
-                            <script type="text/javascript"
-                                    src="{{ url_for('static', filename='js/sorttables.js') }}"></script>
+                           <script type="text/javascript"
+                                    src="{{ url_for('static', filename='js/sort.js') }}"></script>
                         </div>
                         <div style="text-align: center">
                     {% else %}

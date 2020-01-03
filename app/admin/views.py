@@ -3,20 +3,22 @@ from flask import abort, flash, redirect, render_template, url_for
 from flask_login import current_user, login_required
 from sqlalchemy import exc
 from sqlalchemy import func
-from sqlalchemy.sql import label
-
 # Local imports
 from app.admin import admin
 from app.admin.forms import DepartmentForm, EmployeeEditForm
 from app import db
 from app.models import Department, Employee
+from loggers import get_logger
+
+
+logger = get_logger(__name__)
 
 
 def check_admin():
-    """
-    Prevent non-admins from accessing the page
+    """Prevent non-admins from accessing the page
 
-     Return: 403 error
+     Return:
+         403 error
 
     """
     if not current_user.is_admin:
@@ -34,9 +36,10 @@ def list_departments():
     check_admin()
     avg_info = dict()
 
-    avg_data = Employee.query.with_entities(Employee.department_name,
-                                            func.avg(Employee.salary).label('salary')).group_by(
-        Employee.department_name)
+    avg_data = Employee.query.with_entities(
+        Employee.department_name,
+        func.avg(Employee.salary).label('salary')
+    ).group_by(Employee.department_name)
 
     for unit in avg_data:
         if unit.department_name:
@@ -45,7 +48,7 @@ def list_departments():
     departments = Department.query.all()
 
     return render_template('admin/departments/departments.html',
-                           departments=departments, title='Departments', avg_info=avg_info, zip=zip)
+                           departments=departments, title='Departments', avg_info=avg_info)
 
 
 @admin.route('/departments/add', methods=['GET', 'POST'])
@@ -68,8 +71,12 @@ def add_department():
             # add a department to the database
             db.session.add(department)
             db.session.commit()
+
+            logger.info(f'Department {department.name} has been added')
+
             flash('The new department have been successfully added !')
-        except:
+        except exc.IntegrityError:
+            logger.exception('Add department exc.IntegrityError')
             flash('Error: department name already exists.')
 
         return redirect(url_for('admin.list_departments'))
@@ -94,12 +101,14 @@ def edit_department(department_id):
     add_department = False
 
     department = Department.query.get_or_404(department_id)
+    logger.info(f'Id: {department.department_id} Department edited from {department.name}')
     form = DepartmentForm(obj=department)
 
     if form.validate_on_submit():
         department.name = form.name.data
         # department.description = form.description.data  # ToDo description later
         db.session.commit()
+        logger.info(f'Id: {department.department_id} Department edited to {department.name}')
         flash('You have successfully edited the department.')
 
         return redirect(url_for('admin.list_departments'))
@@ -125,16 +134,19 @@ def delete_department(department_id):
     try:
         department = Department.query.get_or_404(department_id)
         db.session.delete(department)
+        logger.warning(f'Department {department.name} is ready to be deleted -')
         db.session.commit()
+        logger.info(f'Department {department.name} has been deleted -')
+
         flash('The department have been successfully deleted !')
+
     except exc.IntegrityError as e:
+        logger.exception('MySQLdb._exceptions.IntegrityError')
         flash('Departments cannot be deleted with employees! We are not Ciklum !!!')
         return redirect(url_for('admin.list_departments'))
 
     # redirect to the departments page
     return redirect(url_for('admin.list_departments'))
-
-    return render_template(title="Delete Department")
 
 
 @admin.route('/employees')
@@ -175,6 +187,8 @@ def add_employee():
 
         db.session.add(employee)
         db.session.commit()
+        logger.info(f'Add employee Id: {employee.id}, first name: {employee.first_name},'
+                    f'last name: {employee.last_name} has been added. ')
 
         flash(f'{employee.first_name} {employee.last_name}  have been successfully added !')
 
@@ -196,8 +210,8 @@ def edit_employee(id):
     check_admin()
 
     employee = Employee.query.get_or_404(id)
-
-    # prevent admin from being assigned a department or role
+    logger.info(f'Edit employee Id: {employee.id} {employee.first_name} {employee.last_name}')
+    # prevent admin from being assigned a department
     if employee.is_admin:
         abort(403)
 
@@ -212,9 +226,12 @@ def edit_employee(id):
 
         db.session.add(employee)
         db.session.commit()
+        logger.info(f'Id: {employee.id}, first name: {employee.first_name},'
+                    f'last name: {employee.last_name} has been edit. ')
+
         flash('The employee has been succesfully edit !')
 
-        # redirect to the roles page
+        # redirect to the employees page
         return redirect(url_for('admin.list_employees'))
 
     return render_template('admin/employees/employee.html',
@@ -233,8 +250,12 @@ def delete_employee(id):
     check_admin()
 
     employee = Employee.query.get_or_404(id)
+    logger.info(f'Delete employee Id: {employee.id} first name: {employee.first_name} last name: {employee.last_name}')
     db.session.delete(employee)
     db.session.commit()
+    logger.info(f'Id: {employee.id}, first name: {employee.first_name},'
+                f'last name: {employee.last_name} has been deleted. ')
+
     flash(f'{employee.first_name} {employee.last_name} has been fired or gone!')
 
     # redirect to the departments page

@@ -1,13 +1,15 @@
 # 3rd party imports
-from flask import flash, redirect, render_template, url_for
+from flask import flash, redirect, render_template, url_for, request
 from flask_login import login_required, login_user, logout_user
-
 # Local imports
 from . import auth
 # import app.auth as auth
 from app.auth.forms import LoginForm, RegistrationForm
 from app import db
 from app.models import Employee
+from loggers import get_logger
+
+logger = get_logger(__name__)
 
 
 @auth.route('/register', methods=['GET', 'POST'])
@@ -30,7 +32,9 @@ def register():
         # add employee to the database
         db.session.add(employee)
         db.session.commit()
-        flash('You have successfully registered! You may log in now.')
+        logger.info(f'{employee.email} {employee.username} has registered')
+
+        flash('You have successfully registered! You may log in now.', 'success')
 
         # redirect to the login page
         return redirect(url_for('auth.login'))
@@ -45,17 +49,18 @@ def login():
     Handle requests to the /login route
     Log an employee in through the login form
     """
-    form = LoginForm()
+    form = LoginForm(request.form)
 
     if form.validate_on_submit():
 
         # check whether employee exists in database and whether
         # the password entered matches the password in the database
         employee = Employee.query.filter_by(email=form.email.data).first()
-        if employee is not None and employee.verify_password(
-                form.password.data):
+        if employee is not None and employee.verify_password(form.password.data):
+
             # log employee in
             login_user(employee)
+            logger.info(f'{employee.email} {employee.username} admin:{employee.is_admin} logged in')
 
             # redirect to the appropriate dashboard page
             if employee.is_admin:
@@ -65,6 +70,7 @@ def login():
 
     # when login details are incorrect
         else:
+            logger.info(f'{employee.email} {employee.username} admin:{employee.is_admin} entered invalid data')
             flash('Invalid email or password')
 
     # load login template
