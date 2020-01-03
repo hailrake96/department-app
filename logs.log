@@ -1266,3 +1266,495 @@
 2020-01-03 17:11:32,611 - app.util - Test TestDep, admin and test_user have been committed
 2020-01-03 17:11:32,668 - app.util - Test databased has been deleted
 --------------------------------------------------------------------------------------
+2020-01-03 17:29:35,737 - app.util - Test database has been created
+2020-01-03 17:29:35,851 - app.util - admin has been created
+2020-01-03 17:29:35,956 - app.util - test_user has been created
+2020-01-03 17:29:35,957 - app.util - TestDep has been created
+2020-01-03 17:29:35,977 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:29:35,979 - app - 403 Error occurred
+2020-01-03 17:29:36,019 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:29:36,140 - app.util - Test database has been created
+2020-01-03 17:29:36,257 - app.util - admin has been created
+2020-01-03 17:29:36,372 - app.util - test_user has been created
+2020-01-03 17:29:36,372 - app.util - TestDep has been created
+2020-01-03 17:29:36,388 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:29:36,389 - app - 404 Error occurred
+2020-01-03 17:29:36,420 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:29:36,542 - app.util - Test database has been created
+2020-01-03 17:29:36,657 - app.util - admin has been created
+2020-01-03 17:29:36,764 - app.util - test_user has been created
+2020-01-03 17:29:36,764 - app.util - TestDep has been created
+2020-01-03 17:29:36,785 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:29:36,787 - app - 500 Error occurred
+2020-01-03 17:29:36,824 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:29:36,940 - app.util - Test database has been created
+2020-01-03 17:29:37,053 - app.util - admin has been created
+2020-01-03 17:29:37,157 - app.util - test_user has been created
+2020-01-03 17:29:37,157 - app.util - TestDep has been created
+2020-01-03 17:29:37,173 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:29:37,192 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:29:37,312 - app.util - Test database has been created
+2020-01-03 17:29:37,426 - app.util - admin has been created
+2020-01-03 17:29:37,534 - app.util - test_user has been created
+2020-01-03 17:29:37,535 - app.util - TestDep has been created
+2020-01-03 17:29:37,549 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:29:37,573 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:29:37,683 - app.util - Test database has been created
+2020-01-03 17:29:37,799 - app.util - admin has been created
+2020-01-03 17:29:37,904 - app.util - test_user has been created
+2020-01-03 17:29:37,904 - app.util - TestDep has been created
+2020-01-03 17:29:37,952 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:29:37,972 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:29:38,092 - app.util - Test database has been created
+2020-01-03 17:29:38,202 - app.util - admin has been created
+2020-01-03 17:29:38,308 - app.util - test_user has been created
+2020-01-03 17:29:38,308 - app.util - TestDep has been created
+2020-01-03 17:29:38,326 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:29:38,346 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:29:38,475 - app.util - Test database has been created
+2020-01-03 17:29:38,590 - app.util - admin has been created
+2020-01-03 17:29:38,695 - app.util - test_user has been created
+2020-01-03 17:29:38,695 - app.util - TestDep has been created
+2020-01-03 17:29:38,713 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:29:38,734 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:29:38,846 - app.util - Test database has been created
+2020-01-03 17:29:38,960 - app.util - admin has been created
+2020-01-03 17:29:39,065 - app.util - test_user has been created
+2020-01-03 17:29:39,065 - app.util - TestDep has been created
+2020-01-03 17:29:39,089 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:29:39,108 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:29:39,231 - app.util - Test database has been created
+2020-01-03 17:29:39,344 - app.util - admin has been created
+2020-01-03 17:29:39,453 - app.util - test_user has been created
+2020-01-03 17:29:39,454 - app.util - TestDep has been created
+2020-01-03 17:29:39,470 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:29:39,494 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:29:39,615 - app.util - Test database has been created
+2020-01-03 17:29:39,731 - app.util - admin has been created
+2020-01-03 17:29:39,840 - app.util - test_user has been created
+2020-01-03 17:29:39,840 - app.util - TestDep has been created
+2020-01-03 17:29:39,859 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:29:39,876 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:29:39,995 - app.util - Test database has been created
+2020-01-03 17:29:40,108 - app.util - admin has been created
+2020-01-03 17:29:40,216 - app.util - test_user has been created
+2020-01-03 17:29:40,216 - app.util - TestDep has been created
+2020-01-03 17:29:40,237 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:29:40,262 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:29:40,385 - app.util - Test database has been created
+2020-01-03 17:29:40,499 - app.util - admin has been created
+2020-01-03 17:29:40,607 - app.util - test_user has been created
+2020-01-03 17:29:40,607 - app.util - TestDep has been created
+2020-01-03 17:29:40,630 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:29:40,653 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:29:40,776 - app.util - Test database has been created
+2020-01-03 17:29:40,890 - app.util - admin has been created
+2020-01-03 17:29:40,999 - app.util - test_user has been created
+2020-01-03 17:29:41,000 - app.util - TestDep has been created
+2020-01-03 17:29:41,016 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:29:41,051 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:29:41,175 - app.util - Test database has been created
+2020-01-03 17:29:41,288 - app.util - admin has been created
+2020-01-03 17:29:41,394 - app.util - test_user has been created
+2020-01-03 17:29:41,394 - app.util - TestDep has been created
+2020-01-03 17:29:41,407 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:29:41,426 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:29:41,556 - app.util - Test database has been created
+2020-01-03 17:29:41,670 - app.util - admin has been created
+2020-01-03 17:29:41,780 - app.util - test_user has been created
+2020-01-03 17:29:41,780 - app.util - TestDep has been created
+2020-01-03 17:29:41,792 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:29:41,816 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:29:41,942 - app.util - Test database has been created
+2020-01-03 17:29:42,052 - app.util - admin has been created
+2020-01-03 17:29:42,158 - app.util - test_user has been created
+2020-01-03 17:29:42,158 - app.util - TestDep has been created
+2020-01-03 17:29:42,180 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:29:42,203 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:29:42,314 - app.util - Test database has been created
+2020-01-03 17:29:42,424 - app.util - admin has been created
+2020-01-03 17:29:42,530 - app.util - test_user has been created
+2020-01-03 17:29:42,530 - app.util - TestDep has been created
+2020-01-03 17:29:42,550 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:29:42,671 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:29:42,790 - app.util - Test database has been created
+2020-01-03 17:29:42,906 - app.util - admin has been created
+2020-01-03 17:29:43,013 - app.util - test_user has been created
+2020-01-03 17:29:43,013 - app.util - TestDep has been created
+2020-01-03 17:29:43,032 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:29:43,053 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:29:43,165 - app.util - Test database has been created
+2020-01-03 17:29:43,277 - app.util - admin has been created
+2020-01-03 17:29:43,383 - app.util - test_user has been created
+2020-01-03 17:29:43,383 - app.util - TestDep has been created
+2020-01-03 17:29:43,399 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:29:43,498 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:29:43,618 - app.util - Test database has been created
+2020-01-03 17:29:43,728 - app.util - admin has been created
+2020-01-03 17:29:43,835 - app.util - test_user has been created
+2020-01-03 17:29:43,835 - app.util - TestDep has been created
+2020-01-03 17:29:43,857 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:29:43,879 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:29:43,989 - app.util - Test database has been created
+2020-01-03 17:29:44,113 - app.util - admin has been created
+2020-01-03 17:29:44,222 - app.util - test_user has been created
+2020-01-03 17:29:44,223 - app.util - TestDep has been created
+2020-01-03 17:29:44,261 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:29:44,286 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:29:44,396 - app.util - Test database has been created
+2020-01-03 17:29:44,515 - app.util - admin has been created
+2020-01-03 17:29:44,633 - app.util - test_user has been created
+2020-01-03 17:29:44,634 - app.util - TestDep has been created
+2020-01-03 17:29:44,651 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:29:44,689 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:42:23,905 - app.util - Test database has been created
+2020-01-03 17:42:24,019 - app.util - admin has been created
+2020-01-03 17:42:24,127 - app.util - test_user has been created
+2020-01-03 17:42:24,127 - app.util - TestDep has been created
+2020-01-03 17:42:24,153 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:42:24,155 - app - 403 Error occurred
+2020-01-03 17:42:24,202 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:42:24,323 - app.util - Test database has been created
+2020-01-03 17:42:24,431 - app.util - admin has been created
+2020-01-03 17:42:24,538 - app.util - test_user has been created
+2020-01-03 17:42:24,538 - app.util - TestDep has been created
+2020-01-03 17:42:24,560 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:42:24,562 - app - 404 Error occurred
+2020-01-03 17:42:24,603 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:42:24,735 - app.util - Test database has been created
+2020-01-03 17:42:24,846 - app.util - admin has been created
+2020-01-03 17:42:24,956 - app.util - test_user has been created
+2020-01-03 17:42:24,957 - app.util - TestDep has been created
+2020-01-03 17:42:24,977 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:42:24,979 - app - 500 Error occurred
+2020-01-03 17:42:25,031 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:42:25,151 - app.util - Test database has been created
+2020-01-03 17:42:25,265 - app.util - admin has been created
+2020-01-03 17:42:25,371 - app.util - test_user has been created
+2020-01-03 17:42:25,371 - app.util - TestDep has been created
+2020-01-03 17:42:25,394 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:42:25,415 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:42:25,544 - app.util - Test database has been created
+2020-01-03 17:42:25,662 - app.util - admin has been created
+2020-01-03 17:42:25,767 - app.util - test_user has been created
+2020-01-03 17:42:25,768 - app.util - TestDep has been created
+2020-01-03 17:42:25,822 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:42:25,842 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:42:25,973 - app.util - Test database has been created
+2020-01-03 17:42:26,091 - app.util - admin has been created
+2020-01-03 17:42:26,200 - app.util - test_user has been created
+2020-01-03 17:42:26,200 - app.util - TestDep has been created
+2020-01-03 17:42:26,227 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:42:26,248 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:42:26,376 - app.util - Test database has been created
+2020-01-03 17:42:26,486 - app.util - admin has been created
+2020-01-03 17:42:26,596 - app.util - test_user has been created
+2020-01-03 17:42:26,597 - app.util - TestDep has been created
+2020-01-03 17:42:26,622 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:42:26,646 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:42:26,771 - app.util - Test database has been created
+2020-01-03 17:42:26,883 - app.util - admin has been created
+2020-01-03 17:42:26,988 - app.util - test_user has been created
+2020-01-03 17:42:26,989 - app.util - TestDep has been created
+2020-01-03 17:42:27,014 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:42:27,042 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:42:27,175 - app.util - Test database has been created
+2020-01-03 17:42:27,286 - app.util - admin has been created
+2020-01-03 17:42:27,392 - app.util - test_user has been created
+2020-01-03 17:42:27,392 - app.util - TestDep has been created
+2020-01-03 17:42:27,416 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:42:27,434 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:42:27,567 - app.util - Test database has been created
+2020-01-03 17:42:27,685 - app.util - admin has been created
+2020-01-03 17:42:27,795 - app.util - test_user has been created
+2020-01-03 17:42:27,795 - app.util - TestDep has been created
+2020-01-03 17:42:27,816 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:42:27,839 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:42:27,973 - app.util - Test database has been created
+2020-01-03 17:42:28,089 - app.util - admin has been created
+2020-01-03 17:42:28,198 - app.util - test_user has been created
+2020-01-03 17:42:28,199 - app.util - TestDep has been created
+2020-01-03 17:42:28,220 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:42:28,238 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:42:28,375 - app.util - Test database has been created
+2020-01-03 17:42:28,488 - app.util - admin has been created
+2020-01-03 17:42:28,594 - app.util - test_user has been created
+2020-01-03 17:42:28,595 - app.util - TestDep has been created
+2020-01-03 17:42:28,609 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:42:28,632 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:42:28,759 - app.util - Test database has been created
+2020-01-03 17:42:28,863 - app.util - admin has been created
+2020-01-03 17:42:28,967 - app.util - test_user has been created
+2020-01-03 17:42:28,968 - app.util - TestDep has been created
+2020-01-03 17:42:28,990 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:42:29,010 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:42:29,152 - app.util - Test database has been created
+2020-01-03 17:42:29,268 - app.util - admin has been created
+2020-01-03 17:42:29,377 - app.util - test_user has been created
+2020-01-03 17:42:29,378 - app.util - TestDep has been created
+2020-01-03 17:42:29,397 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:42:29,430 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:42:29,555 - app.util - Test database has been created
+2020-01-03 17:42:29,668 - app.util - admin has been created
+2020-01-03 17:42:29,775 - app.util - test_user has been created
+2020-01-03 17:42:29,775 - app.util - TestDep has been created
+2020-01-03 17:42:29,793 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:42:29,816 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:42:29,947 - app.util - Test database has been created
+2020-01-03 17:42:30,056 - app.util - admin has been created
+2020-01-03 17:42:30,161 - app.util - test_user has been created
+2020-01-03 17:42:30,161 - app.util - TestDep has been created
+2020-01-03 17:42:30,181 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:42:30,216 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:42:30,340 - app.util - Test database has been created
+2020-01-03 17:42:30,453 - app.util - admin has been created
+2020-01-03 17:42:30,564 - app.util - test_user has been created
+2020-01-03 17:42:30,564 - app.util - TestDep has been created
+2020-01-03 17:42:30,580 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:42:30,611 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:42:30,733 - app.util - Test database has been created
+2020-01-03 17:42:30,844 - app.util - admin has been created
+2020-01-03 17:42:30,948 - app.util - test_user has been created
+2020-01-03 17:42:30,948 - app.util - TestDep has been created
+2020-01-03 17:42:30,971 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:42:31,128 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:42:31,251 - app.util - Test database has been created
+2020-01-03 17:42:31,362 - app.util - admin has been created
+2020-01-03 17:42:31,467 - app.util - test_user has been created
+2020-01-03 17:42:31,467 - app.util - TestDep has been created
+2020-01-03 17:42:31,491 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:42:31,512 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:42:31,648 - app.util - Test database has been created
+2020-01-03 17:42:31,765 - app.util - admin has been created
+2020-01-03 17:42:31,873 - app.util - test_user has been created
+2020-01-03 17:42:31,874 - app.util - TestDep has been created
+2020-01-03 17:42:31,894 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:42:32,042 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:42:32,172 - app.util - Test database has been created
+2020-01-03 17:42:32,283 - app.util - admin has been created
+2020-01-03 17:42:32,389 - app.util - test_user has been created
+2020-01-03 17:42:32,389 - app.util - TestDep has been created
+2020-01-03 17:42:32,433 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:42:32,460 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:42:32,585 - app.util - Test database has been created
+2020-01-03 17:42:32,697 - app.util - admin has been created
+2020-01-03 17:42:32,802 - app.util - test_user has been created
+2020-01-03 17:42:32,803 - app.util - TestDep has been created
+2020-01-03 17:42:32,822 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:42:32,846 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:42:32,985 - app.util - Test database has been created
+2020-01-03 17:42:33,102 - app.util - admin has been created
+2020-01-03 17:42:33,205 - app.util - test_user has been created
+2020-01-03 17:42:33,205 - app.util - TestDep has been created
+2020-01-03 17:42:33,233 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:42:33,280 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:43:59,450 - app.util - Test database has been created
+2020-01-03 17:43:59,561 - app.util - admin has been created
+2020-01-03 17:43:59,671 - app.util - test_user has been created
+2020-01-03 17:43:59,672 - app.util - TestDep has been created
+2020-01-03 17:43:59,732 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:43:59,734 - app - 403 Error occurred
+2020-01-03 17:43:59,790 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:43:59,915 - app.util - Test database has been created
+2020-01-03 17:44:00,023 - app.util - admin has been created
+2020-01-03 17:44:00,131 - app.util - test_user has been created
+2020-01-03 17:44:00,132 - app.util - TestDep has been created
+2020-01-03 17:44:00,157 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:44:00,159 - app - 404 Error occurred
+2020-01-03 17:44:00,204 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:44:00,338 - app.util - Test database has been created
+2020-01-03 17:44:00,451 - app.util - admin has been created
+2020-01-03 17:44:00,567 - app.util - test_user has been created
+2020-01-03 17:44:00,567 - app.util - TestDep has been created
+2020-01-03 17:44:00,587 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:44:00,589 - app - 500 Error occurred
+2020-01-03 17:44:00,626 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:44:00,764 - app.util - Test database has been created
+2020-01-03 17:44:00,878 - app.util - admin has been created
+2020-01-03 17:44:00,986 - app.util - test_user has been created
+2020-01-03 17:44:00,986 - app.util - TestDep has been created
+2020-01-03 17:44:01,012 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:44:01,034 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:44:01,179 - app.util - Test database has been created
+2020-01-03 17:44:01,294 - app.util - admin has been created
+2020-01-03 17:44:01,405 - app.util - test_user has been created
+2020-01-03 17:44:01,405 - app.util - TestDep has been created
+2020-01-03 17:44:01,427 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:44:01,450 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:44:01,571 - app.util - Test database has been created
+2020-01-03 17:44:01,691 - app.util - admin has been created
+2020-01-03 17:44:01,803 - app.util - test_user has been created
+2020-01-03 17:44:01,803 - app.util - TestDep has been created
+2020-01-03 17:44:01,826 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:44:01,848 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:44:01,974 - app.util - Test database has been created
+2020-01-03 17:44:02,081 - app.util - admin has been created
+2020-01-03 17:44:02,188 - app.util - test_user has been created
+2020-01-03 17:44:02,188 - app.util - TestDep has been created
+2020-01-03 17:44:02,211 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:44:02,230 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:44:02,360 - app.util - Test database has been created
+2020-01-03 17:44:02,477 - app.util - admin has been created
+2020-01-03 17:44:02,588 - app.util - test_user has been created
+2020-01-03 17:44:02,588 - app.util - TestDep has been created
+2020-01-03 17:44:02,612 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:44:02,638 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:44:02,765 - app.util - Test database has been created
+2020-01-03 17:44:02,878 - app.util - admin has been created
+2020-01-03 17:44:02,990 - app.util - test_user has been created
+2020-01-03 17:44:02,991 - app.util - TestDep has been created
+2020-01-03 17:44:03,014 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:44:03,033 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:44:03,160 - app.util - Test database has been created
+2020-01-03 17:44:03,280 - app.util - admin has been created
+2020-01-03 17:44:03,390 - app.util - test_user has been created
+2020-01-03 17:44:03,390 - app.util - TestDep has been created
+2020-01-03 17:44:03,409 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:44:03,438 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:44:03,563 - app.util - Test database has been created
+2020-01-03 17:44:03,675 - app.util - admin has been created
+2020-01-03 17:44:03,782 - app.util - test_user has been created
+2020-01-03 17:44:03,782 - app.util - TestDep has been created
+2020-01-03 17:44:03,808 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:44:03,825 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:44:03,964 - app.util - Test database has been created
+2020-01-03 17:44:04,080 - app.util - admin has been created
+2020-01-03 17:44:04,185 - app.util - test_user has been created
+2020-01-03 17:44:04,186 - app.util - TestDep has been created
+2020-01-03 17:44:04,209 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:44:04,234 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:44:04,395 - app.util - Test database has been created
+2020-01-03 17:44:04,511 - app.util - admin has been created
+2020-01-03 17:44:04,618 - app.util - test_user has been created
+2020-01-03 17:44:04,618 - app.util - TestDep has been created
+2020-01-03 17:44:04,641 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:44:04,667 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:44:04,798 - app.util - Test database has been created
+2020-01-03 17:44:04,913 - app.util - admin has been created
+2020-01-03 17:44:05,017 - app.util - test_user has been created
+2020-01-03 17:44:05,018 - app.util - TestDep has been created
+2020-01-03 17:44:05,039 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:44:05,071 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:44:05,192 - app.util - Test database has been created
+2020-01-03 17:44:05,307 - app.util - admin has been created
+2020-01-03 17:44:05,412 - app.util - test_user has been created
+2020-01-03 17:44:05,412 - app.util - TestDep has been created
+2020-01-03 17:44:05,432 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:44:05,460 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:44:05,595 - app.util - Test database has been created
+2020-01-03 17:44:05,708 - app.util - admin has been created
+2020-01-03 17:44:05,814 - app.util - test_user has been created
+2020-01-03 17:44:05,814 - app.util - TestDep has been created
+2020-01-03 17:44:05,834 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:44:05,863 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:44:05,996 - app.util - Test database has been created
+2020-01-03 17:44:06,113 - app.util - admin has been created
+2020-01-03 17:44:06,225 - app.util - test_user has been created
+2020-01-03 17:44:06,226 - app.util - TestDep has been created
+2020-01-03 17:44:06,262 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:44:06,288 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:44:06,419 - app.util - Test database has been created
+2020-01-03 17:44:06,530 - app.util - admin has been created
+2020-01-03 17:44:06,638 - app.util - test_user has been created
+2020-01-03 17:44:06,638 - app.util - TestDep has been created
+2020-01-03 17:44:06,660 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:44:06,834 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:44:06,968 - app.util - Test database has been created
+2020-01-03 17:44:07,086 - app.util - admin has been created
+2020-01-03 17:44:07,203 - app.util - test_user has been created
+2020-01-03 17:44:07,204 - app.util - TestDep has been created
+2020-01-03 17:44:07,224 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:44:07,252 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:44:07,376 - app.util - Test database has been created
+2020-01-03 17:44:07,489 - app.util - admin has been created
+2020-01-03 17:44:07,595 - app.util - test_user has been created
+2020-01-03 17:44:07,596 - app.util - TestDep has been created
+2020-01-03 17:44:07,623 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:44:07,759 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:44:07,888 - app.util - Test database has been created
+2020-01-03 17:44:08,000 - app.util - admin has been created
+2020-01-03 17:44:08,105 - app.util - test_user has been created
+2020-01-03 17:44:08,105 - app.util - TestDep has been created
+2020-01-03 17:44:08,129 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:44:08,150 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:44:08,293 - app.util - Test database has been created
+2020-01-03 17:44:08,409 - app.util - admin has been created
+2020-01-03 17:44:08,515 - app.util - test_user has been created
+2020-01-03 17:44:08,515 - app.util - TestDep has been created
+2020-01-03 17:44:08,544 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:44:08,566 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
+2020-01-03 17:44:08,700 - app.util - Test database has been created
+2020-01-03 17:44:08,813 - app.util - admin has been created
+2020-01-03 17:44:08,920 - app.util - test_user has been created
+2020-01-03 17:44:08,920 - app.util - TestDep has been created
+2020-01-03 17:44:08,950 - app.util - Test TestDep, admin and test_user have been committed
+2020-01-03 17:44:09,003 - app.util - Test database has been deleted
+--------------------------------------------------------------------------------------
